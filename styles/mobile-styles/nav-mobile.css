@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+/* 1. Apply to body, not just html */
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* Optional: Makes fonts look crisper */
+  -webkit-font-smoothing: antialiased;
+  /* 2. Force form elements to inherit the font */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+
+/*media queries from 1059px or less 
+  max-width from 1059px or less
+*/
+
+@media(max-width:1050px) {
+  header {
+    background-color: yellow;
+  }
+
+}
+
+/*media queries from 992px or less 
+  max-width from 992px or less
+  show the hamburger
+*/
+
+@media(max-width:992px) {
+  header {
+    background-color: rgb(39, 39, 113);
+  }
+}
+
+
+/*media queries from 800px or less 
+  max-width from 800px or less
+  show the hamburger
+*/
+@media(max-width:800px) {
+  header {
+    background-color: rgb(118, 118, 214);
+  }
+
+  nav {
+    grid-template-areas:
+      "navbar    logo    .";
+  }
+
+  .nav-link-container {
+    display: none;
+  }
+
+  .logo-container {
+    /* border: 1px solid red; */
+    height: 100%;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-logo {
+    width: 100%;
+    height: 80px;
+    /* padding: 0 10px; */
+  }
+}
